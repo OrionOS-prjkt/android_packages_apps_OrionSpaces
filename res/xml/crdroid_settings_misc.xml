@@ -113,4 +113,11 @@
             android:summary="@string/hide_screen_capture_status_summary"
             android:defaultValue="false"/>
 
+    <com.crdroid.settings.preferences.GlobalSettingSwitchPreference
+            android:key="pm_downgrade_allowed"
+            android:icon="@drawable/ic_arrow_down"
+            android:title="@string/miscellaneous_app_downgrade_title"
+            android:summary="@string/miscellaneous_app_downgrade_summary"
+            android:defaultValue="false" />
+
 </PreferenceScreen>
