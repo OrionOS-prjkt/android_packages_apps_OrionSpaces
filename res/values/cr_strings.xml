@@ -1539,4 +1539,8 @@
     <string name="show_pif_properties_summary">Show all currently set PIF properties</string>
     <string name="error_loading_properties">Error loading PIF properties</string>
 
+    <!-- Spoof storage encryption status -->
+    <string name="spoof_storage_encryption_status_title">Use storage encryption spoofing</string>
+    <string name="spoof_storage_encryption_status_summary">Spoof storage encryption status to encrypted.</string>
+
 </resources>

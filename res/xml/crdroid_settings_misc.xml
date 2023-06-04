@@ -90,4 +90,12 @@
             android:title="@string/ignore_window_secure_title"
             android:summary="@string/ignore_window_secure_summary"
             android:defaultValue="false"/>
+
+    <com.crdroid.settings.preferences.GlobalSettingSwitchPreference
+            android:key="spoof_storage_encryption_status"
+            android:icon="@drawable/ic_storage"
+            android:title="@string/spoof_storage_encryption_status_title"
+            android:summary="@string/spoof_storage_encryption_status_summary"
+            android:defaultValue="false"/>
+
 </PreferenceScreen>
