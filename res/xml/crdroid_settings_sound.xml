@@ -21,7 +21,7 @@
     android:title="@string/sound_title">
 
     <!-- Sound Engine -->
-    <com.android.settings.preferences.ui.AdaptivePreference
+   <Preference
         android:key="sound_engine"
         android:icon="@drawable/ic_settings_sound"
         android:title="@string/sound_engine_title"
