@@ -64,6 +64,7 @@
     <string name="notification_color">Notification color</string>
     <string name="wallpaper_color">Wallpaper color</string>
     <string name="custom_color">Custom color</string>
+    <string name="reevaluating_theme">Reloading system themes...</string>
 
     <!-- Changelog -->
     <string name="changelog_crdroid_title">Current changelog</string>
