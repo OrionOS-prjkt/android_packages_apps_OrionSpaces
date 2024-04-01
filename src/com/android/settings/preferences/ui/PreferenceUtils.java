@@ -26,6 +26,7 @@ import com.android.settingslib.widget.UsageProgressBarPreference;
 import com.android.settingslib.widget.LayoutPreference;
 import com.android.settingslib.widget.FooterPreference;
 
+import com.android.settings.spa.preference.ComposePreference;
 import com.android.settings.notification.IncreasingRingVolumePreference;
 import com.android.settings.fuelgauge.batteryusage.PowerGaugePreference;
 import com.android.settings.widget.CardPreference;
@@ -83,7 +84,8 @@ public class PreferenceUtils {
             LayoutPreference.class,
             PowerGaugePreference.class,
             PreferenceCategory.class,
-            UsageProgressBarPreference.class
+            UsageProgressBarPreference.class,
+            ComposePreference.class
         );
         return exclusionList;
     }
