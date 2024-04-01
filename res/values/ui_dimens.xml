@@ -41,8 +41,8 @@
     <dimen name="card_height">75.0dp</dimen>
     <dimen name="card_height_rui">75.0dp</dimen>
     <dimen name="card_height_round">75.0dp</dimen>
-    <dimen name="card_radius_highlight">22dp</dimen>
-    <dimen name="card_radius">28dp</dimen>
+    <dimen name="card_radius_highlight">32dp</dimen>
+    <dimen name="card_radius">32dp</dimen>
     <dimen name="top_card_radius">4dp</dimen>
     <dimen name="mid_card_radius">4dp</dimen>
     <dimen name="bot_card_radius">4dp</dimen>
