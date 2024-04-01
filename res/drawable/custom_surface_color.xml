@@ -23,7 +23,7 @@
         <shape xmlns:android="http://schemas.android.com/apk/res/android"
             android:shape="rectangle">
 
-            <solid android:color="@color/card_surface_color" />
+            <solid android:color="@color/card_surface_alpha_color" />
             <corners android:bottomRightRadius="18dp" android:bottomLeftRadius="18dp" 
                 android:topLeftRadius="18dp" android:topRightRadius="18dp"/> 
         </shape>
