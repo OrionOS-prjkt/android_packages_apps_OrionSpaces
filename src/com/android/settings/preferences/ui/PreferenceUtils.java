@@ -19,6 +19,7 @@ package com.android.settings.preferences.ui;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceCategory;
 import androidx.preference.PreferenceGroup;
+import androidx.preference.PreferenceScreen;
 import android.util.Log;
 
 import com.android.settingslib.widget.IllustrationPreference;
@@ -162,4 +163,11 @@ public class PreferenceUtils {
         }
         return preferences;
     }
+    
+    public static void hideEmptyCategory(PreferenceCategory category, PreferenceScreen screen) {
+        if (category != null && category.getPreferenceCount() == 0) {
+            screen.removePreference(category);
+        }
+    }
+
 }

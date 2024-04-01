@@ -1496,4 +1496,7 @@
     <string name="pulse_custom_gravity_center">Center</string>
     <string name="visualizer_center_mirrored_title">Center mirrored</string>
     <string name="visualizer_center_mirrored_summary">Set the visualizer in center mirrored mode</string>
+    
+     <!-- Fingerprint customizations -->
+    <string name="lockscreen_fp_category_title">Fingerprint customizations</string>
 </resources>

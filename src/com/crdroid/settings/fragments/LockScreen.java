@@ -48,6 +48,8 @@ import java.util.List;
 
 import lineageos.providers.LineageSettings;
 
+import com.android.settings.preferences.ui.PreferenceUtils;
+
 @SearchIndexable
 public class LockScreen extends SettingsPreferenceFragment
             implements Preference.OnPreferenceChangeListener  {
@@ -56,6 +58,8 @@ public class LockScreen extends SettingsPreferenceFragment
 
     private static final String LOCKSCREEN_INTERFACE_CATEGORY = "lockscreen_interface_category";
     private static final String LOCKSCREEN_GESTURES_CATEGORY = "lockscreen_gestures_category";
+    private static final String LOCKSCREEN_FP_CATEGORY = "lockscreen_fp_category";
+    private static final String LOCKSCREEN_UDFPS_CATEGORY = "lockscreen_udfps_category";
     private static final String KEY_RIPPLE_EFFECT = "enable_ripple_effect";
     private static final String KEY_WEATHER = "lockscreen_weather_enabled";
     private static final String KEY_UDFPS_ANIMATIONS = "udfps_recognizing_animation_preview";
@@ -77,6 +81,8 @@ public class LockScreen extends SettingsPreferenceFragment
         addPreferencesFromResource(R.xml.crdroid_settings_lockscreen);
 
         PreferenceCategory gestCategory = (PreferenceCategory) findPreference(LOCKSCREEN_GESTURES_CATEGORY);
+        PreferenceCategory udfpsCategory = (PreferenceCategory) findPreference(LOCKSCREEN_UDFPS_CATEGORY);
+        PreferenceCategory fpCategory = (PreferenceCategory) findPreference(LOCKSCREEN_FP_CATEGORY);
 
         FingerprintManager mFingerprintManager = (FingerprintManager)
                 getActivity().getSystemService(Context.FINGERPRINT_SERVICE);
@@ -86,29 +92,42 @@ public class LockScreen extends SettingsPreferenceFragment
         mScreenOffUdfps = (Preference) findPreference(SCREEN_OFF_UDFPS_ENABLED);
 
         if (mFingerprintManager == null || !mFingerprintManager.isHardwareDetected()) {
-            gestCategory.removePreference(mUdfpsAnimations);
-            gestCategory.removePreference(mUdfpsIcons);
-            gestCategory.removePreference(mRippleEffect);
-            gestCategory.removePreference(mScreenOffUdfps);
+            udfpsCategory.removePreference(mUdfpsAnimations);
+            udfpsCategory.removePreference(mUdfpsIcons);
+            udfpsCategory.removePreference(mScreenOffUdfps);
+            fpCategory.removePreference(mRippleEffect);
         } else {
+            int udpfsCustomization = 3;
             if (!Utils.isPackageInstalled(getContext(), "com.crdroid.udfps.animations")) {
-                gestCategory.removePreference(mUdfpsAnimations);
+                udfpsCategory.removePreference(mUdfpsAnimations);
+                udpfsCustomization--;
             }
             if (!Utils.isPackageInstalled(getContext(), "com.crdroid.udfps.icons")) {
-                gestCategory.removePreference(mUdfpsIcons);
+                udfpsCategory.removePreference(mUdfpsIcons);
+                udpfsCustomization--;
             }
             Resources resources = getResources();
             boolean screenOffUdfpsAvailable = resources.getBoolean(
                     com.android.internal.R.bool.config_supportScreenOffUdfps) ||
                     !TextUtils.isEmpty(resources.getString(
                         com.android.internal.R.string.config_dozeUdfpsLongPressSensorType));
-            if (!screenOffUdfpsAvailable)
+            if (!screenOffUdfpsAvailable) {
                 gestCategory.removePreference(mScreenOffUdfps);
+                udpfsCustomization--;
+            }
+            if (udpfsCustomization == 1) {
+                mScreenOffUdfps.setLayoutResource(R.layout.top_level_preference_solo_card);
+            }
         }
 
         mWeather = (Preference) findPreference(KEY_WEATHER);
         mWeatherClient = new OmniJawsClient(getContext());
         updateWeatherSettings();
+        
+        PreferenceScreen screen = getPreferenceScreen();
+        PreferenceUtils.hideEmptyCategory(gestCategory, screen);
+        PreferenceUtils.hideEmptyCategory(udfpsCategory, screen);
+        PreferenceUtils.hideEmptyCategory(fpCategory, screen);
     }
 
     @Override
