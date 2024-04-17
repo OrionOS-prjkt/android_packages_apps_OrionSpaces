@@ -1505,6 +1505,6 @@
     <string name="lockscreen_fp_category_title">Fingerprint customizations</string>
 
     <!-- Adaptive Charging -->
-    <string name="adaptive_charging_enabled_title">Adaptive Charging</string>
+    <string name="adaptive_charging_enabled_title">Optimized Charging</string>
     <string name="adaptive_charging_enabled_summary">Enable adaptive power strategy while device is charging</string>
 </resources>
