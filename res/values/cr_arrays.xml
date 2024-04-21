@@ -1089,6 +1089,10 @@
     	<item>@string/clock_timer</item>
         <item>@string/torch</item>
         <item>@string/weather</item>
+        <item>@string/wifi</item>
+        <item>@string/data</item>
+        <item>@string/ringer</item>
+        <item>@string/bt</item>
     </string-array>
     
     <string-array name="widget_values">
@@ -1098,6 +1102,10 @@
     	<item>timer</item>
         <item>torch</item>
         <item>weather</item>
+        <item>wifi</item>
+        <item>data</item>
+        <item>ringer</item>
+        <item>bt</item>
     </string-array>
     
    <string-array name="volume_styles_entries" translatable="false">
