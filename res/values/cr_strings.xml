@@ -16,6 +16,13 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
+    <!-- Depth Wallpaper -->
+    <string name="dw_file_header_select_title">Select Depth Wallpaper Subject</string>
+    <string name="dw_file_header_select_summary">Select depth wallpaper subject image from storage.</string>
+    <string name="dw_wallpaper_enabled_title">Depth Wallpaper</string>
+    <string name="dw_wallpaper_enabled_summary">Enable iOS-inspired depth wallpaper. Requires a subject image.</string>
+    <string name="dw_wallpaper_opacity_title">Depth Wallpaper Opacity</string>
+
     <!-- Color Picker -->
     <string name="dialog_color_picker">Color Picker</string>
     <string name="press_color_to_apply">Press on color below to apply</string>
