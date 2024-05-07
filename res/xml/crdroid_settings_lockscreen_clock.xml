@@ -24,10 +24,6 @@
         android:key="lockscreen_clock_category"
         android:title="@string/lockscreen_clock_category_title">
 
-         <Preference
-            android:key="lockscreen_preview"
-            settings:layout="@layout/lockscreen_preview" />
-
         <com.crdroid.settings.preferences.SystemSettingListPreference
             android:entries="@array/clock_style_entries"
             android:icon="@drawable/ic_clock"
@@ -52,16 +48,19 @@
     <PreferenceCategory
         android:key="lockscreen_widgets"
         android:title="@string/lockscreen_widgets_title">
-        
-         <Preference
-            android:key="lockscreen_widgets_preview"
-            settings:layout="@layout/lockscreen_widgets_preview" />
 
         <com.crdroid.settings.preferences.SystemSettingSwitchPreference
             android:key="lockscreen_widgets_enabled"
             android:title="@string/lockscreen_widgets_enabled_title"
             android:summary="@string/lockscreen_widgets_enabled_summary"
-            android:defaultValue="true"
+            android:defaultValue="false"
+            lineage:position="solo" />
+
+        <com.crdroid.settings.preferences.SystemSettingSwitchPreference
+            android:key="lockscreen_display_widgets"
+            android:title="@string/lockscreen_display_widgets_title"
+            android:summary="@string/lockscreen_display_widgets_summary"
+            android:defaultValue="false"
             lineage:position="solo" />
 
         <com.crdroid.settings.preferences.SystemSettingListPreference
