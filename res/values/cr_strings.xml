@@ -23,6 +23,10 @@
     <string name="dw_wallpaper_enabled_summary">Enable iOS-inspired depth wallpaper. Requires a subject image.</string>
     <string name="dw_wallpaper_opacity_title">Depth Wallpaper Opacity</string>
 
+    <!-- Volume Media Button -->
+    <string name="volume_show_media_button_title">Volume media button</string>
+    <string name="volume_show_media_button_summary">Show media output switcher button into volume dialog</string>
+
     <!-- Color Picker -->
     <string name="dialog_color_picker">Color Picker</string>
     <string name="press_color_to_apply">Press on color below to apply</string>
