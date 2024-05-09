@@ -27,6 +27,12 @@
     <string name="volume_show_media_button_title">Volume media button</string>
     <string name="volume_show_media_button_summary">Show media output switcher button into volume dialog</string>
 
+    <!-- Healthy Charge -->
+    <string name="health_charge_enabled_title">Healthy Charge</string>
+    <string name="health_charge_enabled_summary">Enable healthy charging notifications</string>
+    <string name="health_charge_low_threshold_title">Low battery level threshold</string>
+    <string name="health_charge_high_threshold_title">Charging level threshold</string>
+
     <!-- Color Picker -->
     <string name="dialog_color_picker">Color Picker</string>
     <string name="press_color_to_apply">Press on color below to apply</string>
