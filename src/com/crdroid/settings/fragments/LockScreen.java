@@ -103,26 +103,16 @@ public class LockScreen extends SettingsPreferenceFragment
             udfpsCategory.removePreference(mScreenOffUdfps);
             fpCategory.removePreference(mRippleEffect);
         } else {
-            int udpfsCustomization = 3;
-            if (!Utils.isPackageInstalled(getContext(), "com.crdroid.udfps.animations")) {
+            final boolean udfpsAnimationInstalled = Utils.isPackageInstalled(getContext(), "com.crdroid.udfps.animations");
+            final boolean udfpsIconsInstalled = Utils.isPackageInstalled(getContext(), "com.crdroid.udfps.icons");
+            if (!udfpsAnimationInstalled) {
                 udfpsCategory.removePreference(mUdfpsAnimations);
-                udpfsCustomization--;
             }
-            if (!Utils.isPackageInstalled(getContext(), "com.crdroid.udfps.icons")) {
+            if (!udfpsIconsInstalled) {
                 udfpsCategory.removePreference(mUdfpsIcons);
-                udpfsCustomization--;
             }
-            Resources resources = getResources();
-            boolean screenOffUdfpsAvailable = resources.getBoolean(
-                    com.android.internal.R.bool.config_supportScreenOffUdfps) ||
-                    !TextUtils.isEmpty(resources.getString(
-                        com.android.internal.R.string.config_dozeUdfpsLongPressSensorType));
-            if (!screenOffUdfpsAvailable) {
+            if (!udfpsAnimationInstalled && !udfpsIconsInstalled) {
                 gestCategory.removePreference(mScreenOffUdfps);
-                udpfsCustomization--;
-            }
-            if (udpfsCustomization == 1) {
-                mScreenOffUdfps.setLayoutResource(R.layout.top_level_preference_solo_card);
             }
         }
 
