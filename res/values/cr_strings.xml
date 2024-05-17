@@ -28,6 +28,9 @@
         The depth wallpaper feature, inspired by iOS\'s Wallpaper Subject Segmentation, enables overlaying of a subject above the lockscreen clock to show a wallpaper depth effect.\n\nTo setup Depth Wallpaper Feature:\n1. Set a wallpaper with the subject or a background you want the subject to be above of.\n2. Select a subject image to track, this image will be overlaid above the lockscreen clock.\n3. Modify the offsets and opacity according to your needs.
     </string>
 
+    <!-- Volume Row Percent -->
+    <string name="volume_show_volume_percent_title">Show Volume Row Percentage</string>
+    <string name="volume_show_volume_percent_summary">Show volume row progress percentage</string>
 
     <!-- Volume Media Button -->
     <string name="volume_show_media_button_title">Volume media button</string>
