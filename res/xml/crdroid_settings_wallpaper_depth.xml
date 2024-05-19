@@ -50,7 +50,7 @@
         settings:min="-100"
         settings:interval="1"
         settings:units="%"
-        android:defaultValue="-16" />
+        android:defaultValue="0" />
         
     <com.crdroid.settings.preferences.SystemSettingSeekBarPreference
         android:key="depth_wallpaper_offset_y"
@@ -59,7 +59,7 @@
         settings:min="-100"
         settings:interval="1"
         settings:units="%"
-        android:defaultValue="-16"
+        android:defaultValue="0"
         lineage:position="bottom" />
         
     <com.android.settingslib.widget.FooterPreference
