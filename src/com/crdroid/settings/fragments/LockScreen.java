@@ -49,6 +49,8 @@ import lineageos.providers.LineageSettings;
 
 import com.android.settings.preferences.ui.PreferenceUtils;
 
+import com.android.internal.util.rising.SystemRestartUtils;
+
 @SearchIndexable
 public class LockScreen extends SettingsPreferenceFragment
             implements Preference.OnPreferenceChangeListener  {
@@ -64,12 +66,14 @@ public class LockScreen extends SettingsPreferenceFragment
     private static final String KEY_UDFPS_ANIMATIONS = "udfps_recognizing_animation_preview";
     private static final String KEY_UDFPS_ICONS = "udfps_icon_picker";
     private static final String SCREEN_OFF_UDFPS_ENABLED = "screen_off_udfps_enabled";
+    private static final String KEY_KG_USER_SWITCHER= "kg_user_switcher_enabled";
 
     private Preference mUdfpsAnimations;
     private Preference mUdfpsIcons;
     private Preference mRippleEffect;
     private Preference mWeather;
     private Preference mScreenOffUdfps;
+    private Preference mUserSwitcher;
     
     private OmniJawsClient mWeatherClient;
 
@@ -78,6 +82,9 @@ public class LockScreen extends SettingsPreferenceFragment
         super.onCreate(savedInstanceState);
 
         addPreferencesFromResource(R.xml.crdroid_settings_lockscreen);
+        
+        mUserSwitcher = (Preference) findPreference(KEY_KG_USER_SWITCHER);
+        mUserSwitcher.setOnPreferenceChangeListener(this);
 
         PreferenceCategory gestCategory = (PreferenceCategory) findPreference(LOCKSCREEN_GESTURES_CATEGORY);
         PreferenceCategory udfpsCategory = (PreferenceCategory) findPreference(LOCKSCREEN_UDFPS_CATEGORY);
@@ -131,6 +138,10 @@ public class LockScreen extends SettingsPreferenceFragment
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
+        if (preference == mUserSwitcher) {
+            SystemRestartUtils.showSystemUIRestartDialog(getContext());
+            return true;
+        }
         return false;
     }
 
