@@ -16,6 +16,20 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
+    <!-- X-Reality Engine -->
+    <string name="x_reality_engine_mode_title">X-Reality Engine</string>
+    <string name="x_reality_engine_mode_summary">Enable bravia engine inspired display mode</string>
+
+    <!-- Display settings screen, color balance category title [CHAR LIMIT=30] -->
+    <string name="color_mode_balance_category">Color balance</string>
+    <!-- Display settings screen, red color balance setting slider [CHAR LIMIT=NONE] -->
+    <string name="color_mode_balance_red">Red strength</string>
+    <!-- Display settings screen, green color balance setting slider [CHAR LIMIT=NONE] -->
+    <string name="color_mode_balance_green">Green strength</string>
+    <!-- Display settings screen, blue color balance setting slider [CHAR LIMIT=NONE] -->
+    <string name="color_mode_balance_blue">Blue strength</string>
+    <string name="keywords_color_balance">color, color balance, color correction, red, green, blue, LiveDisplay</string>
+
     <!-- User Switcher -->
     <string name="kg_user_switcher_enabled_title">User Switcher</string>
     <string name="kg_user_switcher_enabled_summary">Show user switcher when showing pin/password prompt</string>
