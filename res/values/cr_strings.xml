@@ -16,6 +16,10 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
+    <!-- Compact QS Media Player-->
+    <string name="qs_compact_media_player_mode_title">Compact QS Media player</string>
+    <string name="qs_compact_media_player_mode_summary">Enable compact mode for QuickSettings media player</string>
+
     <!-- X-Reality Engine -->
     <string name="x_reality_engine_mode_title">X-Reality Engine</string>
     <string name="x_reality_engine_mode_summary">Enable bravia engine inspired display mode</string>
