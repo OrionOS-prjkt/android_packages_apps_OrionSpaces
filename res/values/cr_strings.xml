@@ -16,6 +16,10 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
+    <!-- Volume Sound Haptics -->
+    <string name="volume_sound_haptics_title">Volume sound haptics</string>
+    <string name="volume_sound_haptics_summary">Enable sound feedback when adjusting volume row progress</string>
+
     <!-- Compact QS Media Player-->
     <string name="qs_compact_media_player_mode_title">Compact QS Media player</string>
     <string name="qs_compact_media_player_mode_summary">Enable compact mode for QuickSettings media player</string>
