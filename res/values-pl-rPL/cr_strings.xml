@@ -16,10 +16,10 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- App Title -->
-    <string name="crdroid_settings_title">Ustawienia crDroid</string>
+    <string name="crdroid_settings_title">Ustawienia OrionOS</string>
     <string name="crdroid_settings_summary">Spersonalizuj swój system</string>
     <string name="reset_settings_title">Zresetuj ustawienia</string>
-    <string name="reset_settings_message">To zresetuje większość ustawień crDroid do ich wartości domyślnych dla bieżącego użytkownika. Czy chcesz kontynuować?</string>
+    <string name="reset_settings_message">To zresetuje większość ustawień OrionOS do ich wartości domyślnych dla bieżącego użytkownika. Czy chcesz kontynuować?</string>
     <!-- Personalization Categories -->
     <string name="button_title">Przyciski</string>
     <string name="lockscreen_title">Ekran blokady</string>
@@ -59,17 +59,17 @@
     <string name="changelog_crdroid_summary">Pokaż zmiany w zainstalowanym systemie</string>
     <string name="changelog_crdroid_error">Nie można załadować dziennika zmian</string>
     <!-- About crDroid -->
-    <string name="about_crdroid">O crDroid</string>
+    <string name="about_crdroid">O OrionOs</string>
     <string name="about_device_name">Urządzenie</string>
     <!-- Share crDroid -->
-    <string name="share_crdroid_title">Udostępnij crDroid</string>
-    <string name="share_crdroid_summary">Powiadom innych o crDroid </string>
-    <string name="share_message">Sprawdź, czy #crDroidAndroid jest dostępny dla twojego urządzenia @ https://crdroid.net/</string>
-    <string name="share_chooser_title">Udostępnij crDroid</string>
-    <!-- Sites crDroid -->
+    <string name="share_crdroid_title">Udostępnij OrionOS</string>
+    <string name="share_crdroid_summary">Powiadom innych o OrionOS </string>
+    <string name="share_message">Sprawdź, czy #OrionOS jest dostępny dla twojego urządzenia @ https://crdroid.net/</string>
+    <string name="share_chooser_title">Udostępnij OrionOS</string>
+    <!-- Sites ] -->
     <string name="crdroid_source_title">GitHub</string>
     <string name="crdroid_source_summary">Kochamy open source, sprawdź nas</string>
-    <string name="crdroid_telegram_title">Społeczność crDroid</string>
+    <string name="crdroid_telegram_title">Społeczność OrionOS</string>
     <string name="crdroid_telegram_summary">Jesteśmy na Telegramie. Dołącz do nas!</string>
     <string name="crdroid_telegram_channel_title">Kanał aktualizacji</string>
     <string name="crdroid_telegram_channel_summary">Otrzymuj powiadomienia o nowych wersjach na Telegramie</string>
@@ -82,7 +82,7 @@
     <!-- Donate crDroid -->
     <string name="donate_crdroid_title">Wesprzyj nas</string>
     <string name="donate_crdroid_summary">Wspomóż dalszy rozwój</string>
-    <string name="donate_team_title">zespół crDroid</string>
+    <string name="donate_team_title">zespół OrionOS</string>
     <string name="donate_team_summary">Przekaż datek na wsparcie hostingu serwerów, dostępności witryny i ogólnego zarządzania</string>
     <!-- OTA -->
     <string name="crdroid_update_title">Aktualizacje</string>
@@ -551,7 +551,7 @@
     <string name="qs_footer_services_icon_title">Skrót do działających usług</string>
     <string name="qs_footer_settings_icon_title">Skrót do ustawień</string>
     <!-- Device Info screen. crDroid legal. -->
-    <string name="crdroid_license_title">Licencje crDroid</string>
+    <string name="crdroid_license_title">Licencje OrionOS</string>
     <!-- Quick Settings brightness slider -->
     <string name="qs_brightness_slider_category">Pasek jasności</string>
     <string name="qs_show_brightness_slider_title">Kiedy pokazywać</string>
@@ -952,7 +952,7 @@
     <string name="status_bar_logo_summary">Wyświetlaj własne logo po lewej lub prawej stronie paska stanu</string>
     <string name="status_bar_logo_position_title">Położenie logo</string>
     <string name="status_bar_logo_style_title">Styl logo</string>
-    <string name="status_bar_logo_style_crdroid">crDroid</string>
+    <string name="status_bar_logo_style_crdroid">OrionOS</string>
     <string name="status_bar_logo_style_android">Android</string>
     <string name="status_bar_logo_style_adidas">Adidas</string>
     <string name="status_bar_logo_style_alien">Obcy</string>
