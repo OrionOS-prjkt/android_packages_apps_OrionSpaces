@@ -16,10 +16,10 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- App Title -->
-    <string name="crdroid_settings_title">mîhengên crDroid</string>
+    <string name="crdroid_settings_title">mîhengên OrionOS</string>
     <string name="crdroid_settings_summary">Xwezî veke</string>
     <string name="reset_settings_title">Mîhengan vegerîne</string>
-    <string name="reset_settings_message">Ev ê piraniya mîhengên crdroid-ê li nirxên xweyên xwerû ji bo bikarhênerê heyî vegerîne. Ma hûn dixwazin berdewam bikin?</string>
+    <string name="reset_settings_message">Ev ê piraniya mîhengên OrionOS-ê li nirxên xweyên xwerû ji bo bikarhênerê heyî vegerîne. Ma hûn dixwazin berdewam bikin?</string>
     <!-- Personalization Categories -->
     <string name="button_title">دوگمەکان</string>
     <string name="lockscreen_title">ڕوونماداخراو</string>
@@ -59,17 +59,17 @@
     <string name="changelog_crdroid_summary">View changes in the ROM installed</string>
     <string name="changelog_crdroid_error">Unable to load changelog</string>
     <!-- About crDroid -->
-    <string name="about_crdroid">دەربارەی crDroid</string>
+    <string name="about_crdroid">دەربارەی OrionOS</string>
     <string name="about_device_name">Hacet</string>
     <!-- Share crDroid -->
-    <string name="share_crdroid_title">هاوبەشکردنی crDroid</string>
-    <string name="share_crdroid_summary">Let others know about crDroid</string>
-    <string name="share_message">Check out if #crDroidAndroid is available for your device @ https://crdroid.net/</string>
-    <string name="share_chooser_title">هاوبەشکردنی crDroid</string>
+    <string name="share_crdroid_title">هاوبەشکردنی OrionOS</string>
+    <string name="share_crdroid_summary">Let others know about OrionOS</string>
+    <string name="share_message">Check out if #OrionOS is available for your device @ https://crdroid.net/</string>
+    <string name="share_chooser_title">هاوبەشکردنی OrionOS</string>
     <!-- Sites crDroid -->
     <string name="crdroid_source_title">GitHub</string>
     <string name="crdroid_source_summary">We love open source, check us out</string>
-    <string name="crdroid_telegram_title">crDroid community</string>
+    <string name="crdroid_telegram_title">OrionOS community</string>
     <string name="crdroid_telegram_summary">We are on telegram. Join us!</string>
     <string name="crdroid_telegram_channel_title">Updates channel</string>
     <string name="crdroid_telegram_channel_summary">Get notified of new builds on Telegram</string>
@@ -82,7 +82,7 @@
     <!-- Donate crDroid -->
     <string name="donate_crdroid_title">Support us</string>
     <string name="donate_crdroid_summary">Donate to support further development</string>
-    <string name="donate_team_title">crDroid team</string>
+    <string name="donate_team_title">OrionOS team</string>
     <string name="donate_team_summary">Donate to support server hosting, site uptime and overall management</string>
     <!-- The Drill -->
     <string name="drill_title">The drill</string>
@@ -552,7 +552,7 @@
     <string name="qs_footer_services_icon_title">Running services shortcut</string>
     <string name="qs_footer_settings_icon_title">Settings shortcut</string>
     <!-- Device Info screen. crDroid legal. -->
-    <string name="crdroid_license_title">crDroid legal</string>
+    <string name="crdroid_license_title">OrionOS legal</string>
     <!-- Quick Settings brightness slider -->
     <string name="qs_brightness_slider_category">تەختەی ڕۆشنایی</string>
     <string name="qs_show_brightness_slider_title">تەختەی ڕۆشنایی</string>
@@ -951,7 +951,7 @@
     <string name="status_bar_logo_summary">Display a custom logo on left or right of the status bar</string>
     <string name="status_bar_logo_position_title">شوێنی لۆگۆ</string>
     <string name="status_bar_logo_style_title">شێوازی لۆگۆ</string>
-    <string name="status_bar_logo_style_crdroid">crDroid</string>
+    <string name="status_bar_logo_style_crdroid">OrionOS</string>
     <string name="status_bar_logo_style_android">ئەندرۆید</string>
     <string name="status_bar_logo_style_adidas">Adidas</string>
     <string name="status_bar_logo_style_alien">Alien</string>
