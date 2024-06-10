@@ -48,6 +48,7 @@ public class PreferenceLayoutUtil {
             "top_level_storage",
             "top_level_notifications",
             "top_level_communal",
+            "top_level_accounts",
             "top_level_safety_center"
     ));
 
@@ -56,7 +57,6 @@ public class PreferenceLayoutUtil {
             "top_level_sound",
             "top_level_wallpaper",
             "top_level_location",
-            "top_level_accounts",
             "top_level_about_device"
     ));
     
