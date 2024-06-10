@@ -5,10 +5,5 @@
         android:color="?android:colorAccent"
         android:state_activated="true" />
     <item
-        android:color="?android:colorAccent"
-        android:state_activated="false"
-        android:alpha="0.24" />
-    <item
-        android:color="@color/option_border_default"
-        android:alpha="0.05" />
+        android:color="?android:textColorSecondary" />
 </selector>

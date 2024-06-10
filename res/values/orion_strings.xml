@@ -13,6 +13,40 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
+    <!-- Orion Spaces Dashboard Categories title -->
+    <string name="button_title">Buttons</string>
+    <string name="lockscreen_title">Lock Screen</string>
+    <string name="misc_title">Miscellaneous</string>
+    <string name="navigation_title">Navigation</string>
+    <string name="notifications_title">Notifications</string>
+    <string name="quicksettings_title">Quick Settings</string>
+    <string name="sound_title">Sound</string>
+    <string name="statusbar_title">Status Bar</string>
+    <string name="display_title">Display</string>
+    <string name="ui_title">User Interface</string>
+
+    <!-- Orion Spaces Dashboard Summary -->
+    <string name="about_orionos_summary">About Team</string>
+    <string name="buttons_spaces_summary">Tweak hardware buttons</string>
+    <string name="lockscreen_spaces_summary">Customize lockscreen interface</string>
+    <string name="misc_spaces_summary">Misc uncategorized stuffs</string>
+    <string name="nav_spaces_summary">Customize navigation behavior</string>
+    <string name="notif_spaces_summary">Notification Control and more</string>
+    <string name="qs_spaces_summary">QuickSettings customizations</string>
+    <string name="sound_spaces_summary">Sound and vibrations customizations</string>
+    <string name="sb_spaces_summary">Customize statusbar icons • layout etc</string>
+    <string name="ui_spaces_summary">Customize UI colors • icons • fonts etc</string>
+
+    <!-- App Title -->
+    <string name="orion_settings_title">Orion Spaces</string>
+    <string name="orion_settings_summary">Let\'s get Orion customizations here!</string>
+    <string name="crdroid_settings_title">OrionOS Settings</string>
+    <string name="crdroid_settings_summary">Open goodness</string>
+    <string name="reset_settings_title">Reset settings</string>
+    <string name="reset_settings_message">This will reset most OrionOS settings to their default values for the current user. Would you like to continue?</string>
+    <string name="search_homepage">Search</string>
+
+
     <!-- Ignore secure window -->
     <string name="ignore_window_secure_title">Ignore window secure flags</string>
     <string name="ignore_window_secure_summary">Fixes black screenshots and recordings, May lead to privacy leaks, Restart apps to apply changes</string>
