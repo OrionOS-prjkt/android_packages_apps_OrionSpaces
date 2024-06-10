@@ -3,12 +3,9 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:color="?android:colorAccent"
-        android:state_activated="true" />
+        android:state_activated="true"
+        android:alpha="0.25" />
     <item
         android:color="?android:colorAccent"
-        android:state_activated="false"
-        android:alpha="0.24" />
-    <item
-        android:color="@color/option_border_default"
-        android:alpha="0.05" />
+        android:alpha="0.0" />
 </selector>

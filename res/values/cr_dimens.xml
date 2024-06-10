@@ -35,4 +35,10 @@
     <dimen name="columbus_list_item_text_spacing">32.0dip</dimen>
 
     <dimen name="package_list_padding_top">16dp</dimen>
+    
+    <dimen name="alert_dialog_padding_material">20.0dip</dimen>
+    <dimen name="app_list_margin_end">16.0dip</dimen>
+    <dimen name="app_list_margin_start">72.0dip</dimen>
+    <dimen name="card_margin">16.0dip</dimen>
+    <dimen name="picker_circle_preview_size">26.0dip</dimen>
 </resources>
