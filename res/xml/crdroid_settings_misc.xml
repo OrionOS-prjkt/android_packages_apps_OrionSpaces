@@ -98,4 +98,12 @@
             android:summary="@string/spoof_storage_encryption_status_summary"
             android:defaultValue="false"/>
 
+        <!-- Unlimit screenrecord -->
+    <com.crdroid.settings.preferences.SystemSettingSwitchPreference
+            android:key="unlimit_screenrecord"
+            android:icon="@drawable/ic_screenrecord"
+            android:title="@string/miscellaneous_unlimit_screenrecord_title"
+            android:summary="@string/miscellaneous_unlimit_screenrecord_summary"
+            android:defaultValue="false" />
+
 </PreferenceScreen>

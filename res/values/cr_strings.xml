@@ -1543,4 +1543,8 @@
     <string name="spoof_storage_encryption_status_title">Use storage encryption spoofing</string>
     <string name="spoof_storage_encryption_status_summary">Spoof storage encryption status to encrypted.</string>
 
+    <!-- Unlimit screenrecord -->
+    <string name="miscellaneous_unlimit_screenrecord_title">Unlimit screenrecord</string>
+    <string name="miscellaneous_unlimit_screenrecord_summary">Remove the 15GiB file size limit\nMay result in a larger than needed output file</string>
+
 </resources>
