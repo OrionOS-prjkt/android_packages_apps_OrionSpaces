@@ -18,11 +18,11 @@
     <style name="orion_title_primary">
         <item name="android:textSize">16.0sp</item>
         <item name="android:textColor">@android:color/system_neutral1_900</item>
-        <item name="android:fontFamily">@android:string/config_headlineFontFamilyMedium</item>
+        <item name="android:fontFamily">@*android:string/config_headlineFontFamilyMedium</item>
     </style>
     <style name="orion_title_secondary">
         <item name="android:textSize">13.0sp</item>
-        <item name="android:textColor">@android:color/system_neutral1_800</item>
-        <item name="android:fontFamily">@android:string/config_bodyFontFamily</item>
+        <item name="android:textColor">@*android:color/system_neutral1_800</item>
+        <item name="android:fontFamily">@*android:string/config_bodyFontFamily</item>
     </style>
 </resources>
