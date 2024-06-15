@@ -19,27 +19,35 @@
         <item name="android:fontFamily">@*android:string/config_bodyFontFamily</item>
         <item name="android:elevation">0dp</item>
     </style>
+
 	<style name="LockscreenWidgetsBackgroundOverlay" parent="">
 		<item name="cornerFamily">rounded</item>
 		<item name="cornerSize">100dp</item>
 	</style>
+
 	    <style name="op_control_text_style_base">
         <item name="android:breakStrategy">simple</item>
+        </style>
+
+    <style name="op_control_text_style_body1" parent="@style/op_control_text_style_base">
+        <item name="android:textSize">13.0sp</item>
+        <item name="android:fontFamily">@*android:string/config_bodyFontFamily</item>
     </style>
+
     <style name="op_control_text_style_h6" parent="@style/op_control_text_style_base">
         <item name="android:textSize">16.0sp</item>
         <item name="android:textColor">?android:textColorPrimary</item>
-        <item name="android:fontFamily">@android:string/config_headlineFontFamilyMedium</item>
+        <item name="android:fontFamily">@*android:string/config_headlineFontFamilyMedium</item>
     </style>
     <style name="orion_title_primary">
         <item name="android:textSize">16.0sp</item>
         <item name="android:textColor">@android:color/system_neutral1_50</item>
-        <item name="android:fontFamily">@android:string/config_headlineFontFamilyMedium</item>
+        <item name="android:fontFamily">@*android:string/config_headlineFontFamilyMedium</item>
     </style>
     <style name="orion_title_secondary">
         <item name="android:textSize">13.0sp</item>
         <item name="android:textColor">@android:color/system_neutral1_100</item>
-        <item name="android:fontFamily">@android:string/config_bodyFontFamily</item>
+        <item name="android:fontFamily">@*android:string/config_bodyFontFamily</item>
     </style>
     <style name="OptionTitleTextAppearance" parent="@android:style/TextAppearance.DeviceDefault.Widget.ActionBar.Title">
         <item name="android:textSize">15.0sp</item>
