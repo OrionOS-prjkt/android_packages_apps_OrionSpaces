@@ -75,4 +75,10 @@
     <dimen name="lockscreen_preview_height_all">580dp</dimen>
     <dimen name="lockscreen_preview_height_with_widgets">480dp</dimen>
     <dimen name="lockscreen_preview_height_with_no_widgets">380dp</dimen>
+    <dimen name="orion_card_radius">22.0dip</dimen>
+    <dimen name="orion_card_side_margin">18.0dip</dimen>
+    <dimen name="orion_cardview_margin_list">16.0dip</dimen>
+    <dimen name="orion_cardview_padding">16.0dip</dimen>
+    <dimen name="orion_cool_branding_half_height">40.0dip</dimen>
+    <dimen name="orion_vertical_padding">20.0dip</dimen>
 </resources>

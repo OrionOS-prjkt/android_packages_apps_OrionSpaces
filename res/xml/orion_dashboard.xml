@@ -17,6 +17,10 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:title="@string/orion_settings_title" >
+
+    <androidx.preference.ListPreference
+        android:selectable="false"
+        settings:layout="@layout/orion_brand_banner" />
             
         <!-- About -->
         <Preference

@@ -55,4 +55,9 @@
         <item name="android:textAlignment">center</item>
         <item name="android:lineHeight">15.0sp</item>
     </style>
+    <style name="TextAppearance_orionCoolBranding">
+        <item name="android:textSize">48.0dip</item>
+        <item name="android:textColor">?android:colorAccent</item>
+        <item name="android:fontFamily">@font/space_age</item>
+    </style>
 </resources>
