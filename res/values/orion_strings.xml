@@ -39,13 +39,13 @@
 
     <!-- App Title -->
     <string name="orion_settings_title">Orion Spaces</string>
+    <string name="orionspace_title">Orion°</string>
     <string name="orion_settings_summary">Let\'s get Orion customizations here!</string>
     <string name="crdroid_settings_title">OrionOS Settings</string>
     <string name="crdroid_settings_summary">Open goodness</string>
     <string name="reset_settings_title">Reset settings</string>
     <string name="reset_settings_message">This will reset most OrionOS settings to their default values for the current user. Would you like to continue?</string>
     <string name="search_homepage">Search</string>
-
 
     <!-- Ignore secure window -->
     <string name="ignore_window_secure_title">Ignore window secure flags</string>
