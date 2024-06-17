@@ -81,4 +81,26 @@
     <string name="function_font_notoserif_italic">NotoSerif Italic</string>
     <string name="function_font_notoserif_bold">NotoSerif Bold</string>
     <string name="function_font_notoserif_bold_italic">NotoSerif Bold Italic</string>
+
+    <!-- About -->
+    <string name="about_info">OrionOS Project is an Android custom ROM based on LineageOS and crDroid, offering a stable experience with extensive customization features and performance enhancements. Supported by an active developer community, this ROM is ideal for users seeking greater control over their Android devices.</string>
+    <string name="rom_info_title">Information about OrionOS</string>
+    <string name="about_website_title">Website</string>
+    <string name="about_website_summary">Feel free to drop by our website</string>
+    <string name="about_github_title" translatable="false">GitHub</string>
+    <string name="about_github_summary">Check out our GitHub</string>
+    <string name="about_telegram_title">Telegram</string>
+    <string name="about_telegram_summary">Check update and news in our telegram </string>
+    <string name="about_contributors_title">Contributors</string>
+    <string name="about_contributor_1_title" translatable="false">Hirokixd</string>
+    <string name="about_contributor_1_summary" translatable="false">Founder</string>
+    <string name="about_contributor_2_title" translatable="false">Romi Yusnandar</string>
+    <string name="about_contributor_2_summary" translatable="false">Co-Founder</string>
+    <string name="about_contributor_3_title" translatable="false">Onle</string>
+    <string name="about_contributor_3_summary" translatable="false">Core Developer</string>
+    <string name="about_contributor_4_title" translatable="false">iverzasterix</string>
+    <string name="about_contributor_4_summary" translatable="false">Core Dev | UI/UX Design</string>
+    <string name="about_contributor_5_title" translatable="false">Reyy ツ [ • AFK • ]</string>
+    <string name="about_contributor_5_summary" translatable="false">Group Support</string>
+
 </resources>

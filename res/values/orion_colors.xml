@@ -21,4 +21,5 @@
     <color name="orion_card_bg">@android:color/system_neutral1_10</color>
     <color name="orion_icon_bg">@android:color/system_accent1_50</color>
     <color name="orion_icon_tint">@color/accent_device_default_light</color>
+    <color name="about_logo">@*android:color/system_neutral1_100</color>
 </resources>
