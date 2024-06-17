@@ -19,4 +19,105 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:title="@string/about_crdroid">
 
+    <com.android.settingslib.widget.LayoutPreference
+        android:key="orion_logo"
+        android:layout="@layout/orion_about_logo"
+        android:clickable="false" />
+
+   <PreferenceCategory
+        android:key="RomInfo"
+        android:title="@string/rom_info_title" />
+
+    <!-- Info -->
+    <com.android.settingslib.widget.TopIntroPreference
+        android:title="@string/about_info" />
+
+    <!-- Website -->
+    <Preference
+        android:title="@string/about_website_title"
+        android:icon="@drawable/ic_website"
+        android:summary="@string/about_website_summary">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:data="https://orionos-prjkt.vercel.app" />
+    </Preference>
+
+    <!-- Github -->
+    <Preference
+        android:title="@string/about_github_title"
+        android:icon="@drawable/ic_github"
+        android:summary="@string/about_github_summary">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:data="https://github.com/OrionOS-prjkt" />
+    </Preference>
+
+    <!-- Telegram -->
+    <Preference
+        android:title="@string/about_telegram_title"
+        android:icon="@drawable/ic_telegram"
+        android:summary="@string/about_telegram_summary">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:data="https://t.me/OrionOS_Update" />
+    </Preference>
+
+    <PreferenceCategory
+        android:key="contributors"
+        android:title="@string/about_contributors_title" />
+
+    <!-- Contributor 1 -->
+        <Preference
+            android:icon="@drawable/hirokixd"
+            android:title="@string/about_contributor_1_title"
+            android:summary="@string/about_contributor_1_summary"
+            settings:layout="@layout/orion_about">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://t.me/Hirokixd28" />
+        </Preference>
+
+    <!-- Contributor 2 -->
+        <Preference
+            android:icon="@drawable/romi"
+            android:title="@string/about_contributor_2_title"
+            android:summary="@string/about_contributor_2_summary"
+            settings:layout="@layout/orion_about">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://t.me/romiyusna" />
+        </Preference>
+
+    <!-- Contributor 3 -->
+        <Preference
+            android:icon="@drawable/onle"
+            android:title="@string/about_contributor_3_title"
+            android:summary="@string/about_contributor_3_summary"
+            settings:layout="@layout/orion_about">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://t.me/michionlee" />
+        </Preference>
+
+    <!-- Contributor 4 -->
+        <Preference
+	    android:icon="@drawable/ivz"
+            android:title="@string/about_contributor_4_title"
+            android:summary="@string/about_contributor_4_summary"
+            settings:layout="@layout/orion_about">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://t.me/iverzasterix" />
+        </Preference>
+
+    <!-- Contributor 5 -->
+        <Preference
+            android:icon="@drawable/reyy"
+            android:title="@string/about_contributor_5_title"
+            android:summary="@string/about_contributor_5_summary"
+            settings:layout="@layout/orion_about">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://t.me/rynothingspecial" />
+        </Preference>
 </PreferenceScreen>
