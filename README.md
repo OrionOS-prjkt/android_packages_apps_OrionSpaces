@@ -1,4 +1,4 @@
-# OrionLab repo #
+# OrionSpaces repo #
 
 ### Description ###
 Our features :)

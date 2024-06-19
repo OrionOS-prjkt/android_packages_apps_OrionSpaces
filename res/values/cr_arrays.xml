@@ -997,6 +997,7 @@
         <item>0</item>
         <item>1</item>
         <item>2</item>
+    </string-array>
     
     <!-- Status bar chip styles-->
     <string-array name="statusbar_clock_chip_entries" translatable="false">
