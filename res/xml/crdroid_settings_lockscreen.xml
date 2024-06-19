@@ -38,14 +38,6 @@
             android:defaultValue="0"
             android:entryValues="@array/clock_style_values" />
 
-        <!-- Lockscreen Clock Font style -->
-        <Preference
-            android:key="android.theme.customization.lockscreen_clock_font"
-            android:icon="@drawable/ic_font"
-            android:title="@string/theme_customization_lock_clock_title"
-            android:summary="@string/theme_customization_lock_clock_summary"
-            android:fragment="com.crdroid.settings.fragments.lockscreen.LockClockFontsPicker"/>
-
     </PreferenceCategory>
 
     <PreferenceCategory
@@ -177,7 +169,7 @@
         android:key="lockscreen_fp_category"
         android:title="@string/lockscreen_fp_category_title">
 
-        <!--<com.crdroid.settings.preferences.SystemSettingSwitchPreference
+        <com.crdroid.settings.preferences.SystemSettingSwitchPreference
             android:key="fp_success_vibrate"
             android:icon="@drawable/ic_fp"
             android:title="@string/fp_success_vibrate_title"
