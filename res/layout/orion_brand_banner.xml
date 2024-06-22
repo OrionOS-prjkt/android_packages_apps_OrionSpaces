@@ -29,7 +29,7 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:paddingVertical="@dimen/orion_cool_branding_half_height">
-            <TextView
+                <com.crdroid.settings.fragments.RainbowTextView
                 android:layout_gravity="center"
                 android:id="@+id/cool_branding_text"
                 android:layout_width="wrap_content"
