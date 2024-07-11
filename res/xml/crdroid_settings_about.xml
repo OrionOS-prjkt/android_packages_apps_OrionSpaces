@@ -39,7 +39,7 @@
         android:summary="@string/about_website_summary">
         <intent
             android:action="android.intent.action.VIEW"
-            android:data="https://orionos-prjkt.vercel.app" />
+            android:data="https://orion-os.vercel.app" />
     </Preference>
 
     <!-- Github -->
