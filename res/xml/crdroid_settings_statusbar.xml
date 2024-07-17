@@ -197,6 +197,18 @@
             android:summary="@string/status_bar_battery_text_charging_summary"
             android:defaultValue="true" />
 
+<PreferenceCategory
+        android:title="Battery Extra customization" >
+
+        <!-- Battery styles -->
+        <Preference
+            android:key="misc_batterysb"
+            android:fragment="com.crdroid.settings.fragments.MiscBatterySettings"
+            android:title="Misc Battery Icon Settings"
+            android:summary="customize statusbar battery icon settings" />
+
+    </PreferenceCategory>
+
         <Preference
             android:key="batterybar"
             android:icon="@drawable/ic_car_battery"
