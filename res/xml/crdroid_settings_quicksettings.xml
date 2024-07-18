@@ -201,6 +201,14 @@
             android:summary="@string/qs_tile_label_hide_summary"
             android:defaultValue="false" />
 
+        <com.android.settings.preferences.ui.AdaptiveListPreference
+            android:key="qs_panel_options"
+            android:persistent="false"
+            android:icon="@drawable/ic_qs_tile"
+            android:title="@string/qs_panel_options_title"
+            android:summary="@string/qs_panel_options_summary"
+            android:fragment="com.crdroid.settings.fragments.QSPanelSettings" />
+
         <com.crdroid.settings.preferences.SystemSettingSeekBarPreference
             android:key="qs_tile_label_size"
             android:icon="@drawable/ic_text"
@@ -217,42 +225,6 @@
             android:title="@string/qs_tile_layout_title"
             android:summary="@string/qs_tile_layout_summary"
             android:defaultValue="false" />
-
-        <com.crdroid.settings.preferences.SystemSettingSeekBarPreference
-            android:key="qs_layout_columns"
-            android:icon="@drawable/ic_qs_tile"
-            android:title="@string/qs_columns_portrait_title"
-            android:max="5"
-            settings:min="2"
-            settings:interval="1"
-            android:defaultValue="2" />
-
-        <com.crdroid.settings.preferences.SystemSettingSeekBarPreference
-            android:key="qs_layout_columns_landscape"
-            android:icon="@drawable/ic_qs_tile"
-            android:title="@string/qs_columns_landscape_title"
-            android:max="5"
-            settings:min="2"
-            settings:interval="1"
-            android:defaultValue="4" />
-
-        <com.crdroid.settings.preferences.SystemSettingSeekBarPreference
-            android:key="qqs_layout_rows"
-            android:icon="@drawable/ic_qs_tile"
-            android:title="@string/qqs_rows_portrait_title"
-            android:max="3"
-            settings:min="1"
-            settings:interval="1"
-            android:defaultValue="2" />
-
-        <com.crdroid.settings.preferences.SystemSettingSeekBarPreference
-            android:key="qqs_layout_rows_landscape"
-            android:icon="@drawable/ic_qs_tile"
-            android:title="@string/qqs_rows_landscape_title"
-            android:max="3"
-            settings:min="1"
-            settings:interval="1"
-            android:defaultValue="1" />
     </PreferenceCategory>
 
     <PreferenceCategory
