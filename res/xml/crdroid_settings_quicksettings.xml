@@ -201,7 +201,7 @@
             android:summary="@string/qs_tile_label_hide_summary"
             android:defaultValue="false" />
 
-        <com.android.settings.preferences.ui.AdaptiveListPreference
+        <Preference
             android:key="qs_panel_options"
             android:persistent="false"
             android:icon="@drawable/ic_qs_tile"
