@@ -26,7 +26,7 @@
     <string name="ui_title">User Interface</string>
 
     <!-- Orion Spaces Dashboard Summary -->
-    <string name="about_orionos_summary">About Team</string>
+    <string name="about_orionos_summary">All about this OS can be found here...</string>
     <string name="buttons_spaces_summary">Tweak hardware buttons</string>
     <string name="lockscreen_spaces_summary">Customize lockscreen interface</string>
     <string name="misc_spaces_summary">Misc uncategorized stuffs</string>

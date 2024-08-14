@@ -18,79 +18,16 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:title="@string/orion_settings_title" >
 
-    <androidx.preference.ListPreference
-        android:selectable="false"
-        settings:layout="@layout/orion_brand_banner" />
-            
-        <!-- About -->
-        <Preference
-            android:icon="@drawable/ic_interface_about"
-            android:title="@string/about_crdroid"
-            android:fragment="com.crdroid.settings.fragments.About"
-            android:summary="@string/about_orionos_summary"
-            settings:layout="@layout/orion_interface_preference_about" />
-        
-        <!-- UserInterface -->
-        <Preference
-            android:icon="@drawable/ic_interface_customization"
-            android:title="@string/ui_title"
-            android:fragment="com.crdroid.settings.fragments.UserInterface"
-            settings:layout="@layout/orion_interface_preference_bot" />
+    <!-- Top Menus -->
+    <com.android.settingslib.widget.LayoutPreference
+        android:key="orionspaces_menu_top"
+        android:layout="@layout/orionspaces_layout_top"
+        android:selectable="false"/>
 
-        <!-- Statusbar -->
-       <Preference
-            android:icon="@drawable/ic_interface_statusbar"
-            android:title="@string/statusbar_title"
-            android:fragment="com.crdroid.settings.fragments.StatusBar" 
-            settings:layout="@layout/orion_interface_preference_top" />
-
-        <!-- QuickSettings -->
-       <Preference
-            android:icon="@drawable/ic_interface_quicksettings"
-            android:title="@string/quicksettings_title"
-            android:fragment="com.crdroid.settings.fragments.QuickSettings"
-            settings:layout="@layout/orion_interface_preference_mid" />
-            
-      <!-- Lockscreen -->
-       <Preference
-            android:icon="@drawable/ic_interface_lockscreen"
-            android:title="@string/lockscreen_title"
-            android:fragment="com.crdroid.settings.fragments.LockScreen"
-            settings:layout="@layout/orion_interface_preference_bot" />
-
-      <!-- Buttons -->
-       <Preference
-            android:icon="@drawable/ic_interface_buttons"
-            android:title="@string/button_title"
-            android:fragment="com.crdroid.settings.fragments.Buttons"
-            settings:layout="@layout/orion_interface_preference_top" />
-
-        <!-- Navigation -->
-       <Preference
-            android:icon="@drawable/ic_interface_navbar"
-            android:title="@string/navigation_title"
-            android:fragment="com.crdroid.settings.fragments.Navigation"
-            settings:layout="@layout/orion_interface_preference_mid" />
-            
-        <!-- Notifications -->
-       <Preference
-            android:icon="@drawable/ic_interface_notifications"
-            android:title="@string/notifications_title"
-            android:fragment="com.crdroid.settings.fragments.Notifications"
-            settings:layout="@layout/orion_interface_preference_bot" />
-
-        <!-- Sound -->
-       <Preference
-            android:icon="@drawable/ic_interface_sound"
-            android:title="@string/sound_title"
-            android:fragment="com.crdroid.settings.fragments.Sound"
-            settings:layout="@layout/orion_interface_preference_top" />
-            
-        <!-- Misc -->
-       <Preference
-            android:icon="@drawable/ic_interface_misc"
-            android:title="@string/misc_title"
-            android:fragment="com.crdroid.settings.fragments.Miscellaneous"
-            settings:layout="@layout/orion_interface_preference_bot" />
+    <!-- Bottom Menus -->
+    <com.android.settingslib.widget.LayoutPreference
+        android:key="orionspaces_menu_bottom"
+        android:layout="@layout/orionspaces_layout_bottom"
+        android:selectable="false"/>  
 
 </PreferenceScreen> 
