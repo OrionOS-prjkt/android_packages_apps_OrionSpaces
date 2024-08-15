@@ -1403,11 +1403,6 @@
     <string name="qs_bt_auto_on_title">Automatic Bluetooth on</string>
     <string name="qs_bt_auto_on_summary">Always turn on Bluetooth when pressing the Bluetooth QS tile</string>
 
-    <!-- Alarm blocker -->
-    <string name="alarm_blocker_title">Alarm blocker</string>
-    <string name="alarm_blocker_summary">Block alarms while screen off</string>
-    <string name="alarm_list_header">Available alarms</string>
-    <string name="alarm_blocker_warning">Blocking alarms have the potential to cause instability, crashes or data loss.</string>
     <!-- Haptics Settings -->
     <string name="haptics_settings_title">System haptics</string>
     <string name="haptics_settings_summary">Modify system haptics intensities</string>
