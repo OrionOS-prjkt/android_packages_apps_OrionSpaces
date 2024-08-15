@@ -51,6 +51,8 @@ import lineageos.providers.LineageSettings;
 
 import java.util.List;
 
+import com.android.internal.util.rising.SystemRestartUtils;
+
 @SearchIndexable
 public class StatusBar extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener {
@@ -86,7 +88,7 @@ public class StatusBar extends SettingsPreferenceFragment implements
     private SystemSettingListPreference mBatteryPercent;
     private SystemSettingListPreference mBatteryStyle;
     private SwitchPreferenceCompat mBatteryTextCharging;
-
+    
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -145,11 +147,11 @@ public class StatusBar extends SettingsPreferenceFragment implements
                 Settings.System.VOWIFI_ICON_STYLE, 1);
         mVowifiIconStyle.setValue(String.valueOf(vowifiIconStyle));
         mVowifiIconStyle.setOnPreferenceChangeListener(this);
-        if (vowifiIconStyle == 0) {
-            mVolteIconStyle.setEnabled(true);
-        } else {
-            mVolteIconStyle.setEnabled(false);
-        }
+
+        int volteIconStyle = Settings.System.getInt(getActivity().getContentResolver(),
+                Settings.System.VOLTE_ICON_STYLE, 1);
+        mVolteIconStyle.setValue(String.valueOf(volteIconStyle));
+        mVolteIconStyle.setOnPreferenceChangeListener(this);
 
         // Adjust status bar preferences for RTL
         if (getResources().getConfiguration().getLayoutDirection() == View.LAYOUT_DIRECTION_RTL) {
@@ -198,11 +200,14 @@ public class StatusBar extends SettingsPreferenceFragment implements
             Settings.System.putInt(resolver,
                   Settings.System.VOWIFI_ICON_STYLE, vowifiIconStyle);
             mVowifiIconStyle.setValue(String.valueOf(vowifiIconStyle));
-            if (vowifiIconStyle == 0) {
-                mVolteIconStyle.setEnabled(true);
-            } else {
-                mVolteIconStyle.setEnabled(false);
-            }
+            SystemRestartUtils.showSystemUIRestartDialog(getContext());
+            return true;
+        } else if (preference == mVolteIconStyle) {
+            int volteIconStyle = Integer.parseInt(((String) newValue).toString());
+            Settings.System.putInt(resolver,
+                  Settings.System.VOLTE_ICON_STYLE, volteIconStyle);
+            mVolteIconStyle.setValue(String.valueOf(volteIconStyle));
+            SystemRestartUtils.showSystemUIRestartDialog(getContext());
             return true;
         }
         return false;
@@ -247,7 +252,10 @@ public class StatusBar extends SettingsPreferenceFragment implements
                 Settings.System.DATA_DISABLED_ICON, 1, UserHandle.USER_CURRENT);
         Settings.System.putIntForUser(resolver,
                 Settings.System.WIFI_STANDARD_ICON, 0, UserHandle.USER_CURRENT);
-
+        Settings.System.putIntForUser(resolver,
+                Settings.System.VOWIFI_ICON_STYLE, 1, UserHandle.USER_CURRENT);
+        Settings.System.putIntForUser(resolver,
+                Settings.System.VOLTE_ICON_STYLE, 1, UserHandle.USER_CURRENT);
         BatteryBar.reset(mContext);
         Clock.reset(mContext);
         NetworkTrafficSettings.reset(mContext);
