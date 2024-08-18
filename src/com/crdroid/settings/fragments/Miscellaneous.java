@@ -19,7 +19,6 @@ import android.content.ContentResolver;
 import android.content.Context;
 import android.content.res.Resources;
 import android.os.Bundle;
-import android.os.SystemProperties;
 import android.os.UserHandle;
 import android.provider.Settings;
 
@@ -45,9 +44,6 @@ public class Miscellaneous extends SettingsPreferenceFragment implements
     public static final String TAG = "Miscellaneous";
 
     private static final String POCKET_JUDGE = "pocket_judge";
-    private static final String SYS_GAMES_SPOOF = "persist.sys.pixelprops.games";
-    private static final String SYS_PHOTOS_SPOOF = "persist.sys.pixelprops.gphotos";
-    private static final String SYS_NETFLIX_SPOOF = "persist.sys.pixelprops.netflix";
 
     private Preference mPocketJudge;
 
@@ -80,9 +76,6 @@ public class Miscellaneous extends SettingsPreferenceFragment implements
                 Settings.System.THREE_FINGER_GESTURE, 0, UserHandle.USER_CURRENT);
         LineageSettings.System.putIntForUser(resolver,
                 LineageSettings.System.AUTO_BRIGHTNESS_ONE_SHOT, 0, UserHandle.USER_CURRENT);
-        SystemProperties.set(SYS_GAMES_SPOOF, "false");
-        SystemProperties.set(SYS_PHOTOS_SPOOF, "true");
-        SystemProperties.set(SYS_NETFLIX_SPOOF, "false");
         SensorBlock.reset(mContext);
     }
 
