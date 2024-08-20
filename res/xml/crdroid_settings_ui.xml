@@ -47,6 +47,14 @@
              android:targetClass="com.crdroid.settings.fragments.ui.DisplayCutoutForceFullscreenActivity"/>
     </Preference>
 
+    <!-- Boot animation -->
+    <Preference
+        android:key="boot_animation"
+        android:icon="@drawable/ic_movie"
+        android:title="@string/themes_boot_animation_title"
+        android:summary="@string/themes_boot_animation_summary"
+        android:fragment="com.crdroid.settings.fragments.ui.BootAnimation" />
+
     <!-- Screen Off animation -->
     <com.crdroid.settings.preferences.SystemSettingListPreference
         android:key="screen_off_animation"
