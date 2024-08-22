@@ -1508,7 +1508,7 @@
 
     <!-- Spoof google app props -->
     <string name="google_spoof_title">Spoof google apps</string>
-    <string name="google_spoof_summary">Spoof a few google apps to Pixel 8 Pro</string>
+    <string name="google_spoof_summary">Spoof a few google apps to latest pixel device</string>
     <string name="google_spoof_option_disabled">Enabling Google apps spoofing is not needed by current device</string>
 
     <!-- Per-app spoofing -->
