@@ -1,138 +1,164 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     android:orientation="vertical"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-    <LinearLayout
-        android:gravity="center"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="fill_parent"
-        android:layout_height="105dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/top_menu_container"
         android:layout_marginTop="10dp"
-        android:orientation="horizontal"
-        android:layout_marginHorizontal="16dp">
-        <LinearLayout
-            android:gravity="center"
-            android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/orionspaces_statusbar"
-            android:background="@drawable/cardview_circle"
-            android:padding="16dp"
             android:layout_width="0dp"
-            android:layout_height="fill_parent"
-            android:layout_weight="1"
-            android:layout_marginEnd="8dp">
+            android:layout_height="0dp"
+            android:background="@drawable/cardview_rectangle"
+            android:padding="16dp"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent="0.25"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/orionspaces_lockscreen">
             <ImageView
-                android:gravity="center"
-                android:layout_gravity="center"
                 android:id="@+id/orionspaces_statusbar_icon"
-                android:layout_width="38dp"
-                android:layout_height="38dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_interface_statusbar"
                 android:tint="?android:colorPrimary"
-                android:src="@drawable/ic_interface_statusbar" />
-        </LinearLayout>
-        <LinearLayout
-            android:gravity="center"
-            android:orientation="vertical"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/orionspaces_lockscreen"
-            android:background="@drawable/cardview_rectangle"
-            android:padding="16dp"
             android:layout_width="0dp"
-            android:layout_height="fill_parent"
-            android:layout_weight="1"
-            android:layout_marginEnd="8dp">
-            <ImageView
-                android:gravity="center"
-                android:layout_gravity="center"
-                android:id="@+id/orionspaces_lockscreen_icon"
-                android:layout_width="38dp"
-                android:layout_height="38dp"
-                android:tint="?android:colorPrimary"
-                android:src="@drawable/ic_interface_lockscreen" />
-        </LinearLayout>
-        <LinearLayout
-            android:gravity="center"
-            android:orientation="vertical"
-            android:id="@+id/orionspaces_buttons"
+            android:layout_height="0dp"
             android:background="@drawable/cardview_circle"
             android:padding="16dp"
-            android:layout_width="0dp"
-            android:layout_height="fill_parent"
-            android:layout_weight="1">
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent="0.30"
+            app:layout_constraintStart_toEndOf="@id/orionspaces_statusbar"
+            app:layout_constraintEnd_toStartOf="@id/orionspaces_buttons">
             <ImageView
-                android:gravity="center"
-                android:layout_gravity="center"
-                android:id="@+id/orionspaces_buttons_icon"
-                android:layout_width="38dp"
-                android:layout_height="38dp"
+                android:id="@+id/orionspaces_lockscreen_icon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_interface_lockscreen"
                 android:tint="?android:colorPrimary"
-                android:src="@drawable/ic_interface_buttons" />
-        </LinearLayout>
-    </LinearLayout>
-    <LinearLayout
-        android:gravity="center"
-        android:layout_width="fill_parent"
-        android:layout_height="105dp"
-        android:layout_marginTop="10dp"
-        android:orientation="horizontal"
-        android:layout_marginHorizontal="16dp">
-        <LinearLayout
-            android:gravity="center"
-            android:orientation="vertical"
-            android:id="@+id/orionspaces_navigation"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/orionspaces_buttons"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
             android:background="@drawable/cardview_rectangle"
             android:padding="16dp"
-            android:layout_width="0dp"
-            android:layout_height="fill_parent"
-            android:layout_weight="1"
-            android:layout_marginEnd="8dp">
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent="0.25"
+            app:layout_constraintStart_toEndOf="@id/orionspaces_lockscreen"
+            app:layout_constraintEnd_toEndOf="parent">
             <ImageView
-                android:gravity="center"
-                android:layout_gravity="center"
+                android:id="@+id/orionspaces_buttons_icon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_interface_buttons"
+                android:tint="?android:colorPrimary"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bottom_menu_container"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/orionspaces_navigation"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/cardview_rectangle"
+            android:padding="16dp"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent="0.25"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/orionspaces_notifications">
+            <ImageView
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
                 android:id="@+id/orionspaces_navigation_icon"
-                android:layout_width="38dp"
-                android:layout_height="38dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
                 android:tint="?android:colorPrimary"
                 android:src="@drawable/ic_interface_navbar" />
-        </LinearLayout>
-        <LinearLayout
-            android:gravity="center"
-            android:orientation="vertical"
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/orionspaces_notifications"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
             android:background="@drawable/cardview_circle"
             android:padding="16dp"
-            android:layout_width="0dp"
-            android:layout_height="fill_parent"
-            android:layout_weight="1"
-            android:layout_marginEnd="8dp">
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent="0.30"
+            app:layout_constraintStart_toEndOf="@id/orionspaces_navigation"
+            app:layout_constraintEnd_toStartOf="@id/orionspaces_sound">
             <ImageView
-                android:gravity="center"
-                android:layout_gravity="center"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
                 android:id="@+id/orionspaces_notifications_icon"
-                android:layout_width="38dp"
-                android:layout_height="38dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
                 android:tint="?android:colorPrimary"
                 android:src="@drawable/ic_interface_notifications" />
-        </LinearLayout>
-        <LinearLayout
-            android:gravity="center"
-            android:orientation="vertical"
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/orionspaces_sound"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
             android:background="@drawable/cardview_rectangle"
             android:padding="16dp"
-            android:layout_width="0dp"
-            android:layout_height="fill_parent"
-            android:layout_weight="1">
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent="0.25"
+            app:layout_constraintStart_toEndOf="@id/orionspaces_notifications"
+            app:layout_constraintEnd_toEndOf="parent">
             <ImageView
-                android:gravity="center"
-                android:layout_gravity="center"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
                 android:id="@+id/orionspaces_sound_icon"
-                android:layout_width="38dp"
-                android:layout_height="38dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
                 android:tint="?android:colorPrimary"
                 android:src="@drawable/ic_interface_sound" />
-        </LinearLayout>
-    </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
     <LinearLayout
         android:gravity="center"
         android:layout_width="fill_parent"
@@ -151,14 +177,15 @@
             <ImageView
                 android:gravity="center"
                 android:layout_gravity="center"
+                android:layout_marginEnd="10dp"
                 android:id="@+id/orionspaces_misc_icon"
-                android:layout_width="24dp"
-                android:layout_height="24dp"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
                 android:tint="?android:colorPrimary"
                 android:src="@drawable/ic_interface_misc" />
             <TextView
                 android:id="@+id/orionspaces_misc_title"
-                android:textSize="16sp"
+                android:textSize="17sp"
                 android:textColor="?android:colorPrimary"
                 android:gravity="center"
                 android:layout_gravity="center"
