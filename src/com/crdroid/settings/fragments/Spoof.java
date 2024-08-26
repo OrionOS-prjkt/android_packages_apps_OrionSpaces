@@ -16,7 +16,7 @@
 package com.crdroid.settings.fragments;
 
 import android.app.Activity;
-import android.app.AlertDialog;
+import android.app.AlertDialog; 
 import android.content.Context;
 import android.content.ContentResolver;
 import android.content.Intent;
@@ -93,16 +93,19 @@ public class Spoof extends SettingsPreferenceFragment implements Preference.OnPr
         mGamePropsJsonFilePreference = findPreference(KEY_GAME_PROPS_JSON_FILE_PREFERENCE);
         mUpdateJsonButton = findPreference(KEY_UPDATE_JSON_BUTTON);
 
+        String model = SystemProperties.get("ro.product.model");
         isPixelDevice = SystemProperties.get("ro.soc.manufacturer").equals("Google");
-        if (!isPixelDevice) {
-            mPropOptions.setEnabled(false);
-            mPropOptions.setSummary(R.string.spoof_option_disabled);
-        } else {
-            mGmsSpoof.setDependency(SYS_PROP_OPTIONS);
-            mGphotosSpoof.setDependency(SYS_PROP_OPTIONS);
-            mNetflixSpoof.setDependency(SYS_PROP_OPTIONS);
-            mGoogleSpoof.setEnabled(false);
-            mGoogleSpoof.setSummary(R.string.google_spoof_option_disabled);
+
+        mGmsSpoof.setDependency(SYS_PROP_OPTIONS);
+        mGphotosSpoof.setDependency(SYS_PROP_OPTIONS);
+        mNetflixSpoof.setDependency(SYS_PROP_OPTIONS);
+        
+        if (isPixelDevice) {
+            mGoogleSpoof.setDefaultValue(false);
+            if (isMainlineTensorModel(model)) {
+                mGoogleSpoof.setEnabled(false);
+                mGoogleSpoof.setSummary(R.string.google_spoof_option_disabled);
+            }
         }
 
         mGmsSpoof.setOnPreferenceChangeListener(this);
@@ -130,12 +133,12 @@ public class Spoof extends SettingsPreferenceFragment implements Preference.OnPr
                 return true;
             });
         }
-
+        
         mUpdateJsonButton.setOnPreferenceClickListener(preference -> {
             updatePropertiesFromUrl("https://raw.githubusercontent.com/chiteroman/PlayIntegrityFix/main/module/pif.json");
             return true;
         });
-
+        
         Preference showPropertiesPref = findPreference("show_pif_properties");
         if (showPropertiesPref != null) {
             showPropertiesPref.setOnPreferenceClickListener(preference -> {
@@ -143,6 +146,10 @@ public class Spoof extends SettingsPreferenceFragment implements Preference.OnPr
                 return true;
             });
         }
+    }
+    
+    private boolean isMainlineTensorModel(String model) {
+        return model.matches("Pixel [8-9][a-zA-Z ]*");
     }
 
     private void openFileSelector(int requestCode) {
@@ -165,7 +172,7 @@ public class Spoof extends SettingsPreferenceFragment implements Preference.OnPr
             }
         }
     }
-
+    
     private void showPropertiesDialog() {
         StringBuilder properties = new StringBuilder();
         try {
