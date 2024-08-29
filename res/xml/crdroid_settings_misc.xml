@@ -120,4 +120,12 @@
             android:summary="@string/miscellaneous_app_downgrade_summary"
             android:defaultValue="false" />
 
+        <!-- Cache Cleaner -->
+    <com.crdroid.settings.preferences.SystemSettingSwitchPreference
+            android:key="cache_cleaner_enabled"
+            android:icon="@drawable/ic_memory"
+            android:title="@string/cache_cleaner_title"
+            android:summary="@string/cache_cleaner_summary"
+            android:defaultValue="false" />
+
 </PreferenceScreen>
