@@ -68,13 +68,6 @@
             android:title="@string/pif_spoofing_title"
             android:summary="@string/pif_spoofing_summary"
             android:dependency="persist.sys.pixelprops.gms"/>
-
-        <!-- Netflix -->
-        <com.crdroid.settings.preferences.SystemPropertySwitchPreference
-            android:key="persist.sys.pixelprops.netflix"
-            android:title="@string/netflix_spoof_title"
-            android:summary="@string/netflix_spoof_summary"
-            android:defaultValue="false" />
             
         <!-- Unlimited google photos storage -->
         <com.crdroid.settings.preferences.SystemPropertySwitchPreference
