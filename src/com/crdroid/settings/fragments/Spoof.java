@@ -47,12 +47,15 @@ import java.net.URL;
 import java.nio.charset.StandardCharsets;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Map;
+import java.util.HashMap;
 
 @SearchIndexable
 public class Spoof extends SettingsPreferenceFragment implements Preference.OnPreferenceChangeListener {
 
     public static final String TAG = "Spoof";
     private static final String SYS_GMS_SPOOF = "persist.sys.pixelprops.gms";
+    private static final String SYS_GMS_SPOOF_BLOCK_ATTESTATION = "persist.sys.pihooks.block_gms_key_attestation";
     private static final String SYS_GOOGLE_SPOOF = "persist.sys.pixelprops.google";
     private static final String SYS_PROP_OPTIONS = "persist.sys.pixelprops.all";
     private static final String SYS_GAMEPROP_ENABLED = "persist.sys.gameprops.enabled";
@@ -64,6 +67,7 @@ public class Spoof extends SettingsPreferenceFragment implements Preference.OnPr
     private boolean isPixelDevice;
 
     private Preference mGmsSpoof;
+    private Preference mGmsBlockAttestation;
     private Preference mGoogleSpoof;
     private Preference mGphotosSpoof;
     private Preference mPropOptions;
@@ -84,6 +88,7 @@ public class Spoof extends SettingsPreferenceFragment implements Preference.OnPr
         mGamePropsSpoof = findPreference(SYS_GAMEPROP_ENABLED);
         mGphotosSpoof = findPreference(SYS_GPHOTOS_SPOOF);
         mGmsSpoof = findPreference(SYS_GMS_SPOOF);
+        mGmsBlockAttestation = findPreference(SYS_GMS_SPOOF_BLOCK_ATTESTATION);
         mGoogleSpoof = findPreference(SYS_GOOGLE_SPOOF);
         mPropOptions = findPreference(SYS_PROP_OPTIONS);
         mPifJsonFilePreference = findPreference(KEY_PIF_JSON_FILE_PREFERENCE);
@@ -182,7 +187,8 @@ public class Spoof extends SettingsPreferenceFragment implements Preference.OnPr
                 "persist.sys.pihooks_MODEL",
                 "persist.sys.pihooks_PRODUCT",
                 "persist.sys.pihooks_SECURITY_PATCH",
-                "persist.sys.pihooks_DEVICE_INITIAL_SDK_INT"
+                "persist.sys.pihooks_DEVICE_INITIAL_SDK_INT",
+                "persist.sys.pihooks_INCREMENTAL"
             };
             for (String key : keys) {
                 String value = SystemProperties.get(key, null);
@@ -203,6 +209,45 @@ public class Spoof extends SettingsPreferenceFragment implements Preference.OnPr
             .show();
     }
 
+     public static Map<String, String> mapBuildFingerprint(String fingerprint) throws Exception {
+        Map<String, String> components = new HashMap<>();
+
+        components.put("FINGERPRINT", fingerprint);
+
+        String[] parts = fingerprint.split(":");
+        if (parts.length != 3) {
+            throw new IllegalArgumentException("Invalid build fingerprint format");
+        }
+
+        String[] brandProductDevice = parts[0].split("/");
+        if (brandProductDevice.length != 3) {
+            throw new IllegalArgumentException("Invalid brand/product/device format");
+        }
+
+        // Parse BRAND, PRODUCT, DEVICE
+        components.put("BRAND", brandProductDevice[0]);
+        components.put("PRODUCT", brandProductDevice[1]);
+        components.put("DEVICE", brandProductDevice[2]);
+
+        // Parse RELEASE, ID, INCREMENTAL from the second part
+        String[] releaseIdIncremental = parts[1].split("/");
+        if (releaseIdIncremental.length != 3) {
+            throw new IllegalArgumentException("Invalid release/id/incremental format");
+        }
+        components.put("RELEASE", releaseIdIncremental[0]);
+        components.put("ID", releaseIdIncremental[1]);
+        components.put("INCREMENTAL", releaseIdIncremental[2]);
+
+        String[] typeTags = parts[2].split("/");
+        if (typeTags.length != 2) {
+            throw new IllegalArgumentException("Invalid type/tags format");
+        }
+        components.put("TYPE", typeTags[0]);
+        components.put("TAGS", typeTags[1]);
+
+        return components;
+     }
+
     private void updatePropertiesFromUrl(String urlString) {
         new Thread(() -> {
             try {
@@ -213,9 +258,10 @@ public class Spoof extends SettingsPreferenceFragment implements Preference.OnPr
                     Log.d(TAG, "Downloaded JSON data: " + json);
                     JSONObject jsonObject = new JSONObject(json);
                     String spoofedModel = jsonObject.optString("MODEL", "Unknown model");
-                    for (Iterator<String> it = jsonObject.keys(); it.hasNext(); ) {
-                        String key = it.next();
-                        String value = jsonObject.getString(key);
+                    Map<String, String> parsedFingerprint = mapBuildFingerprint(jsonObject.getString("FINGERPRINT"));
+                    for (Map.Entry<String, String> entry : parsedFingerprint.entrySet()) {
+                        String value = (jsonObject.optString(entry.getKey(), "").isEmpty()) ? entry.getValue() : jsonObject.optString(entry.getKey(), "");
+                        String key = entry.getKey();
                         Log.d(TAG, "Setting property: persist.sys.pihooks_" + key + " = " + value);
                         SystemProperties.set("persist.sys.pihooks_" + key, value);
                     }
@@ -246,11 +292,12 @@ public class Spoof extends SettingsPreferenceFragment implements Preference.OnPr
                 String json = new String(inputStream.readAllBytes(), StandardCharsets.UTF_8);
                 Log.d(TAG, "PIF JSON data: " + json);
                 JSONObject jsonObject = new JSONObject(json);
-                for (Iterator<String> it = jsonObject.keys(); it.hasNext(); ) {
-                    String key = it.next();
-                    String value = jsonObject.getString(key);
-                    Log.d(TAG, "Setting PIF property: persist.sys.pihooks_" + key + " = " + value);
-                    SystemProperties.set("persist.sys.pihooks_" + key, value);
+                Map<String, String> parsedFingerprint = mapBuildFingerprint(jsonObject.getString("FINGERPRINT"));
+                for (Map.Entry<String, String> entry : parsedFingerprint.entrySet()) {
+                        String value = (jsonObject.optString(entry.getKey(), "").isEmpty()) ? entry.getValue() : jsonObject.optString(entry.getKey(), "");
+                        String key = entry.getKey();
+                        Log.d(TAG, "Setting property: persist.sys.pihooks_" + key + " = " + value);
+                        SystemProperties.set("persist.sys.pihooks_" + key, value);
                 }
             }
         } catch (Exception e) {

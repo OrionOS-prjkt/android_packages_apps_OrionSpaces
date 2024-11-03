@@ -51,6 +51,12 @@
             android:summary="@string/gms_spoof_summary"
             android:defaultValue="true"/>
 
+        <com.crdroid.settings.preferences.SystemPropertySwitchPreference
+            android:key="persist.sys.pihooks.block_gms_key_attestation"
+            android:title="@string/block_gms_key_attestation_title"
+            android:summary="@string/block_gms_key_attestation_summary"
+            android:defaultValue="true" />    
+
         <Preference
             android:key="show_pif_properties"
             android:title="@string/show_pif_properties_title"

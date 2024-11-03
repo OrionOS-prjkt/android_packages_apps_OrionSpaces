@@ -1489,7 +1489,6 @@
     
      <!-- Fingerprint customizations -->
     <string name="lockscreen_fp_category_title">Fingerprint customizations</string>
-
     <!-- Adaptive Charging -->
     <string name="adaptive_charging_enabled_title">Optimized Charging</string>
     <string name="adaptive_charging_enabled_summary">Enable adaptive power strategy while device is charging</string>
@@ -1501,6 +1500,9 @@
     <!-- GMS Spoof -->
     <string name="gms_spoof_title">Enable GMS spoof</string>
     <string name="gms_spoof_summary">Spoof your device to pass Google Play Attestation</string>
+
+    <string name="block_gms_key_attestation_title">Block key attestation</string>
+    <string name="block_gms_key_attestation_summary">Block key attestation requests from GMS (disable if using TrickyStore)</string>
 
     <!-- Enable all props -->
     <string name="all_props_title">Enable spoof options</string>
