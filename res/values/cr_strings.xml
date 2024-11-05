@@ -1420,7 +1420,7 @@
     <string name="lockscreen_clock_category_title">Lockscreen Clock</string>
     <string name="lockscreen_clock_category_summary">Configure lockscreen clock styles</string>
     <string name="custom_clock_style">Custom Clock Style</string>
-    
+
     <!-- Lockscreen widgets  -->
     <string name="lockscreen_widgets_title">Lockscreen Widgets</string>
     <string name="lockscreen_widgets_enabled_title">Enable Lockscreen Widgets</string>
