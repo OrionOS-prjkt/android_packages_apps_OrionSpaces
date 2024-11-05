@@ -90,4 +90,42 @@
             android:title="@string/ignore_window_secure_title"
             android:summary="@string/ignore_window_secure_summary"
             android:defaultValue="false"/>
+
+    <com.crdroid.settings.preferences.GlobalSettingSwitchPreference
+            android:key="spoof_storage_encryption_status"
+            android:icon="@drawable/ic_storage"
+            android:title="@string/spoof_storage_encryption_status_title"
+            android:summary="@string/spoof_storage_encryption_status_summary"
+            android:defaultValue="false"/>
+
+        <!-- Unlimit screenrecord -->
+    <com.crdroid.settings.preferences.SystemSettingSwitchPreference
+            android:key="unlimit_screenrecord"
+            android:icon="@drawable/ic_screenrecord"
+            android:title="@string/miscellaneous_unlimit_screenrecord_title"
+            android:summary="@string/miscellaneous_unlimit_screenrecord_summary"
+            android:defaultValue="false" />
+
+    <com.crdroid.settings.preferences.GlobalSettingSwitchPreference
+            android:key="hide_screen_capture_status"
+            android:icon="@drawable/ic_hide"
+            android:title="@string/hide_screen_capture_status_title"
+            android:summary="@string/hide_screen_capture_status_summary"
+            android:defaultValue="false"/>
+
+    <com.crdroid.settings.preferences.GlobalSettingSwitchPreference
+            android:key="pm_downgrade_allowed"
+            android:icon="@drawable/ic_arrow_down"
+            android:title="@string/miscellaneous_app_downgrade_title"
+            android:summary="@string/miscellaneous_app_downgrade_summary"
+            android:defaultValue="false" />
+
+        <!-- Cache Cleaner -->
+    <com.crdroid.settings.preferences.SystemSettingSwitchPreference
+            android:key="cache_cleaner_enabled"
+            android:icon="@drawable/ic_memory"
+            android:title="@string/cache_cleaner_title"
+            android:summary="@string/cache_cleaner_summary"
+            android:defaultValue="false" />
+
 </PreferenceScreen>
