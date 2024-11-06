@@ -282,6 +282,7 @@
     <string name="power_menu_advanced_title">Advanced reboot options</string>
     <string name="power_menu_airplane_title">Airplane</string>
     <string name="power_menu_torch_title">Flashlight</string>
+    <string name="power_menu_category_title">Power menu</string>
     <string name="power_menu_settings_title">Settings</string>
     <string name="power_menu_lockdown_title">Lockdown</string>
     <string name="power_menu_lockdown_unavailable">Lockdown is disabled as keyguard isn\'t secure</string>
@@ -1601,5 +1602,19 @@
     <string name="vowifi_icon_oneplus">OnePlus VoWiFi Icon</string>
     <string name="vowifi_icon_moto">Moto VoWiFi Icons</string>
     <string name="vowifi_icon_emui">EMUI Icons</string>
+
+    <!-- Power menu Animations  -->
+    <string name="power_menu_animation_title">Power menu animation</string>
+    <string name="power_menu_animation_aosp">AOSP (default)</string>
+    <string name="power_menu_animation_bottom">Bottom</string>
+    <string name="power_menu_animation_top">Top</string>
+    <string name="power_menu_animation_xylon">Fly</string>
+    <string name="power_menu_animation_slide">Slide</string>
+    <string name="power_menu_animation_turn">Turn</string>
+    <string name="power_menu_animation_fly">Glow</string>
+    <string name="power_menu_animation_card">3D</string>
+    <string name="power_menu_animation_translucent_top">Translucent (top)</string>
+    <string name="power_menu_animation_translucent_bottom">Translucent (bottom)</string>
+    <string name="power_menu_animation_rotate">Rotate</string>
 
 </resources>
