@@ -253,15 +253,15 @@ class HideDeveloperStatusSettings: Fragment(R.layout.hide_developer_status_layou
     
     private fun getLabel(packageInfo: PackageInfo) =
         packageInfo.applicationInfo!!.loadLabel(packageManager).toString()
-
+        
     private inner class AppListAdapter: ListAdapter<AppInfo, AppListViewHolder>(itemCallback) {
         private val selectedIndices = mutableSetOf<Int>()
         private var initialList = getInitialCheckedList().toMutableList()
-
+        
         override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) =
             AppListViewHolder(layoutInflater.inflate(
                 R.layout.hide_developer_status_list_item, parent, false))
-
+            
         override fun onBindViewHolder(holder: AppListViewHolder, position: Int) {
             getItem(position).let {
                 holder.label!!.text = it.label
@@ -284,27 +284,27 @@ class HideDeveloperStatusSettings: Fragment(R.layout.hide_developer_status_layou
                 holder.checkBox!!.isChecked = selectedIndices.contains(position)
             }
         }
-
+        
         override fun submitList(list: List<AppInfo>?) {
             initialList = getInitialCheckedList().toMutableList()
             selectedIndices.clear()
             super.submitList(list)
         }
     }
-
+    
     private class AppListViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
         val icon: ImageView? = itemView.findViewById(R.id.icon)
         val label: TextView? = itemView.findViewById(R.id.label)
         val packageName: TextView? = itemView.findViewById(R.id.packageName)
         val checkBox: CheckBox? = itemView.findViewById(R.id.checkBox)
     }
-
+    
     private data class AppInfo(
         val packageName: String,
         val label: String,
         val icon: Drawable,
     )
-
+    
     companion object {
         private val itemCallback = object: DiffUtil.ItemCallback<AppInfo>() {
             override fun areItemsTheSame(oldInfo: AppInfo, newInfo: AppInfo) =
